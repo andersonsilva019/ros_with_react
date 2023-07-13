@@ -3,7 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap'
 export function Header() {
   return (
     <Navbar expand="lg" bg="dark" variant='dark' className="p-2" collapseOnSelect>
-      <Navbar.Brand href="#home">Turtlebot control panel</Navbar.Brand>
+      <Navbar.Brand href="#home">Control Panel</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">

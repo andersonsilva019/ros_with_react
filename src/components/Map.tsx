@@ -5,7 +5,6 @@ let createdMap = false
 
 export function Map() {
 
-
   function viewMap(){
 
     if (createdMap) return
@@ -13,16 +12,17 @@ export function Map() {
     const viewer = new (window as any).ROS2D.Viewer({
       divID: 'map',
       width: 600,
-      height: 500
+      height: 500,
+      background: '#eeeeee',
+
     })
 
     const navClient = new (window as any).NAV2D.OccupancyGridClientNav({
       ros: rosConnection,
       rootObject: viewer.scene,
+      serverName: '/move_base',
       viewer,
-      serverName: '/odom',
-      withOrientation: true,
-      topic: '/map_update',
+      //withOrientation: true,
     })
 
     createdMap = true
@@ -32,9 +32,6 @@ export function Map() {
     viewMap()
   },[])
 
-  return (
-    <div id="map">
-      map
-    </div>
-  )
+  return <div id="map"/>
+  
 }

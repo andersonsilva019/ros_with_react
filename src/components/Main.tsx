@@ -38,13 +38,8 @@ export function Main() {
           <Col>
             <Teleoperation />
           </Col>
-        </Row>
-        <Row>
           <Col>
             <Robot />
-          </Col>
-          <Col>
-            <Map />
           </Col>
         </Row>
         <Row>
@@ -53,6 +48,9 @@ export function Main() {
               audio={false}
               videoConstraints={{ deviceId: 'e2a773e914adb9b9edfd37e8d35fd3472a65a737b402f5c8a027e3f8097c6168' }}
             />
+          </Col>
+          <Col>
+            {/* <Map /> */}
           </Col>
         </Row>
       </Container>
